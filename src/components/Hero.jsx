@@ -12,7 +12,7 @@ const Hero = () => {
             possimus excepturi esse non delectus fuga aspernatur nisi, pariatur rem amet <br />
             aut numquam animi beatae, explicabo reiciendis tempora quam molestias<br />
           </p>
-          <Button variant="primary">Order Now</Button>{' '}
+          <Button href='/detail' variant="warning">Order Now</Button>{' '}
         </div>
       </section>
     </>

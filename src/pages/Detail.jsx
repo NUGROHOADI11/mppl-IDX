@@ -1,40 +1,42 @@
-import "../assets/styles/style.css"
-import Footer from "../components/Footer"
+import { useLocation } from 'react-router-dom';
+import { Container, Row, Button, Col, Card } from "react-bootstrap";
 import NavigationBar from "../components/NavBar2";
-import { Container, Button, Row, Col } from "react-bootstrap";
-import logo from "../assets/images/logo_sevenman.png";
-import "../assets/styles/style.css"
+import Footer from "../components/Footer";
+import Chat from "../components/Chat";
+import "../assets/styles/style.css";
 
 function Detail() {
+    const location = useLocation();
+    const { item } = location.state;
+
     return (
         <>
-        <Container id="detail">
-            <div>
-                <NavigationBar />
-            </div>
-            <Row className="my-4 p-auto" >
-                <Col md={5}>
-                    <img src={logo} className="img-large" id="image-about" alt="about me" />
+            <Container id="detail">
+            <NavigationBar />
+            <Card className="mb-3" style={{ maxHeight: '540px' }}>
+            <Row className="g-0">
+                <Col md={4}>
+                    <Card.Img src={item.image} className="img-fluid rounded-start" alt={item.name} />
                 </Col>
-                <Col md={7}>
-                    <div className="content">
-                        <h3>Product 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quia possimus excepturi esse non delectus fuga aspernatur nisi, pariatur rem amet aut numquam animi beatae, explicabo reiciendis tempora quam molestias harum aliquam, aliquid quo! Id libero facere minus quisquam commodi?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quia possimus excepturi esse non delectus fuga aspernatur nisi, pariatur rem amet aut numquam animi beatae, explicabo reiciendis tempora quam molestias harum aliquam, aliquid quo! Id libero facere minus quisquam commodi?
-                        </p>
-
-                        <Button variant="primary" href="https://wa.me/6281234567890" target="_blank">Order Now</Button>{' '}
-                    </div>
+                <Col md={8}>
+                    <Card.Body>
+                        <Card.Title>{item.name}</Card.Title>
+                        <Card.Text>
+                            {item.description}
+                        </Card.Text>
+                        <Card.Text>
+                            <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Text>
+                        <Button variant="primary" href={`https://wa.me/6281331620830?text=Halo%20Saya%20tertarik%20dengan%20produk%20${item.name}`} target="_blank">Order Now</Button>{' '}
+                    </Card.Body>
                 </Col>
             </Row>
-
+        </Card> 
+            <Chat />
         </Container>
-            <div>
-                <Footer />
-            </div>
+            <Footer />
         </>
-    )
+    );
 }
 
-export default Detail
+export default Detail;

@@ -6,9 +6,9 @@ const Footer = () => {
     <Card bg="dark" text="white" className="text-center" fixed-bottom id="footer">
       <Card.Header>Sweet Parade</Card.Header>
       <Card.Body>
-        <Card.Title>Maniskan Harimu</Card.Title>
+        <Card.Title>Maniskan Hari Pahitmu</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+        Jadikan momen dan acara spesial Dealovers lebih berkesan dengan KEMANISAN KUE
         </Card.Text>
         <Card.Text>
           <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">Youtube</a>
