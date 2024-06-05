@@ -1,0 +1,109 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#header {
+    z-index: 1000;
+    width: 100%;
+    border-radius: 0%;
+    margin-bottom: 6em;
+    color: rgb(82, 44, 13);
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#header2 {
+    background-color: black;
+}
+
+#footer {
+    bottom: 0;
+    width: 100%;
+    border-radius: 0%;
+}
+
+.custom-jumbotron {
+    background-image: url(../images/bg.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.best {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.best h1 {
+    margin-bottom: 2.5em;
+    position: relative;
+}
+
+.about {
+    min-height: 100vh;
+    background-color: antiquewhite;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#about h1 {
+    margin-bottom: 1.5em;
+    margin-top: 2em;
+    position: relative;
+}
+
+.custom-card:hover {
+    transform: scale(1.2);
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.best h1::after,
+.about h1::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7.5%;
+    height: 2px;
+    background-color: black;
+}
+
+#category {
+    margin-top: 3.5em;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 999;
+    border-radius: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#detail {
+    min-height: 78vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
